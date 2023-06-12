@@ -1,0 +1,116 @@
+﻿<Window x:Class="Pokedex.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Pokedex"
+        Height="675"
+        Width="450"
+        ResizeMode="CanMinimize"
+        Background="#dc0a2d">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="105"></RowDefinition>
+            <RowDefinition Height="570"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="20"></ColumnDefinition>
+                <ColumnDefinition Width="20"></ColumnDefinition>
+                <ColumnDefinition Width="20"></ColumnDefinition>
+                <ColumnDefinition Width="290"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Ellipse Grid.Column="0"
+                     Width="80"
+                     Height="80"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Stroke="#000000"
+                     StrokeThickness="2"
+                     Fill="#ffffff">
+            </Ellipse>
+            
+            <Ellipse Grid.Column="0"
+                     Width="65"
+                     Height="65"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Stroke="#000000"
+                     StrokeThickness="2"
+                     Fill="#1A6A9F">
+            </Ellipse>
+
+            <Ellipse Grid.Column="1"
+                     Width="15"
+                     Height="15"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Top"
+                     Margin="0, 15, 0, 0"
+                     Stroke="#000000"
+                     StrokeThickness="2"
+                     Fill="#dc0f32">
+            </Ellipse>
+
+            <Ellipse Grid.Column="2"
+                     Width="15"
+                     Height="15"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Top"
+                     Margin="0, 15, 0, 0"
+                     Stroke="#000000"
+                     StrokeThickness="2"
+                     Fill="#fbe338">
+            </Ellipse>
+
+            <Ellipse Grid.Column="3"
+                     Width="15"
+                     Height="15"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Top"
+                     Margin="0, 15, 0, 0"
+                     Stroke="#000000"
+                     StrokeThickness="2"
+                     Fill="#60B371">
+            </Ellipse>
+
+            <Path Grid.ColumnSpan="5"
+                  Stroke="#000000"
+                  StrokeThickness="5"
+                  Data="
+                  M 0 105 
+                  h 100 
+                  a 30 20 0 0 0 10 -3
+                  l 60 -45
+                  a 20 20  0 0 1 10 -3
+                  h 290"
+                  VerticalAlignment="Bottom" 
+                  StrokeLineJoin ="Round"/>
+        </Grid>
+
+        <Path Grid.RowSpan="2" 
+              Stroke="#000000"
+              StrokeThickness="3"
+              Data="
+              m 10 337.5
+              l 0 25
+              l 25, -25
+              l -25 -25
+              z"
+              Fill="#FEC401"/>
+
+        <Rectangle Grid.Row="1"
+                   Style="{StaticResource Rounded_Rectangle}"
+                   Fill="#E01234"
+                   Width="215"
+                   Height="15"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   Margin="0, 0, 0, 75">
+
+        </Rectangle>
+    </Grid>
+</Window>
