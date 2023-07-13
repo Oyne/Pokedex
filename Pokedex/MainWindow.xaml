@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Pokedex"
-        Height="675"
-        Width="450"
+        SizeToContent="WidthAndHeight"
         ResizeMode="CanMinimize"
         Background="#dc0a2d">
-    <Grid>
+    <Grid Height="675"
+          Width="450">
         <Grid.RowDefinitions>
             <RowDefinition Height="105"></RowDefinition>
             <RowDefinition Height="570"></RowDefinition>
@@ -82,28 +82,59 @@
                   StrokeThickness="5"
                   Data="
                   M 0 105 
-                  h 100 
-                  a 30 20 0 0 0 10 -3
-                  l 60 -45
-                  a 20 20  0 0 1 10 -3
-                  h 290"
-                  VerticalAlignment="Bottom" 
-                  StrokeLineJoin ="Round"/>
+                  h 115 
+                  a 80 80 0 0 0 40 -15
+                  l 50 -35
+                  a 48 40  0 0 1 30 -10
+                  h 190"
+                  VerticalAlignment="Bottom"
+                  StrokeLineJoin="Round" />
         </Grid>
 
-        <Path Grid.RowSpan="2" 
+        <Path Grid.RowSpan="2"
               Stroke="#000000"
-              StrokeThickness="3"
+              StrokeThickness="5"
               Data="
-              m 10 337.5
-              l 0 25
-              l 25, -25
-              l -25 -25
-              z"
-              Fill="#FEC401"/>
+              M 420 42.5
+              h 30
+              M 420 42.5
+              v 635"/>
+
+        <Path Grid.RowSpan="2"
+              Fill="#AB0E28"
+              Data="
+              M 435 45
+              h 15
+              v 630
+              h -15
+              v -630"
+              Style="{StaticResource BlurredPathStyle}" />
+
+        <Path Grid.RowSpan="2"
+              Fill="#46000C"
+              Data="
+              M 422.5 95
+              h 27.5
+              v 8
+              h -27.5
+              v -8
+              m 0 515
+              h 27.5
+              v 8
+              h -27.5
+              v -8"/>
+
+        <Button Grid.RowSpan="2"
+                Width="30"
+                Height="55"
+                Margin="20"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Style="{StaticResource TriangleButtonStyle}"
+                />
 
         <Rectangle Grid.Row="1"
-                   Style="{StaticResource Rounded_Rectangle}"
+                   Style="{StaticResource RoundedRectangleStyle}"
                    Fill="#E01234"
                    Width="215"
                    Height="15"

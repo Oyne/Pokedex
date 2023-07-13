@@ -5,7 +5,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
-        <Style x:Key="Rounded_Rectangle"
+        <Style x:Key="RoundedRectangleStyle"
                TargetType="Rectangle">
             <Setter Property="Stroke"
                     Value="#000000" />
@@ -16,6 +16,51 @@
             <Setter Property="RadiusY"
                     Value="5" />
         </Style>
-        
+
+        <Style x:Key="TriangleButtonStyle"
+               TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Polygon x:Name="Triangle"
+                                     Points="0,0 0,50 25,25"
+                                     Fill="#FEC401"
+                                     Stroke="#000000"
+                                     StrokeThickness="3" />
+                            <Polygon x:Name="PressArea"
+                                     Points="0,0 0,50 25,25"
+                                     Fill="Transparent" />
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+                                <Setter TargetName="Triangle"
+                                        Property="Fill"
+                                        Value="#cb9c00" />
+                            </Trigger>
+                            <Trigger Property="IsPressed"
+                                     Value="True">
+                                <Setter TargetName="Triangle"
+                                        Property="Fill"
+                                        Value="#7d6000" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="BlurredPathStyle"
+               TargetType="Path">
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <BlurEffect Radius="10" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 </Application>
