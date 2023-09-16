@@ -8,7 +8,7 @@
         Title="Pokedex"
         SizeToContent="WidthAndHeight"
         ResizeMode="CanMinimize"
-        Background="Transparent">
+        Background="#252525">
     <Grid Height="675"
           Width="870">
         <Grid.RowDefinitions>
@@ -24,7 +24,7 @@
         <Rectangle Grid.Column="0"
                    Grid.RowSpan="2"
                    VerticalAlignment="top"
-                   Fill="#E01234"
+                   Fill="#dc0a2d"
                    Width="450"
                    Height="675"/>
 
@@ -174,11 +174,10 @@
               h -10
               v -8" />
 
-
         <Path Grid.RowSpan="2"
               Grid.ColumnSpan="2"
               Stroke="#6A0F16"
-              Fill="#E01234"
+              Fill="#dc0a2d"
               StrokeThickness="5"
               Data="
               M 867.5 105 
